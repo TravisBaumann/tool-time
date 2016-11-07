@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+
+    {% block styles %}
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    {% endblock styles %}
+
+    {% block head_scripts %}
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="node_modules/angular-filter/dist/angular-filter.min.js"></script>
+    {% endblock head_scripts %}
+</head>
+<body>
+  
+  {% block content %}
+      
+  {% endblock content %}
+
+  {% block body_scripts %}
+      
+  {% endblock body_scripts %}
+<hr style='margin-top: 200px;''>
+
+Debuggery...
+
+<pre>Tool Title: {{ appCtrl.toolItem.title }}</pre> 
+</body>
+<footer><a href="travisbaumann.github.io">Works by Travis</a></footer>
+</html>

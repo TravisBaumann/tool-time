@@ -1,0 +1,52 @@
+<form ng-submit="toolEditCtrl.saveTool()">
+	<div class="form-group">
+		<label>
+			Workshop owner
+		</label>
+		<input 
+			class="form-control" 
+			type="text" 
+			ng-model="toolEditCtrl.editedTool.name" >	
+
+		<label>
+			Shop Type
+		</label>
+		<select 
+			class="form-control" 
+			ng-model="toolEditCtrl.editedTool.categories" 
+		>
+			<option value="WOODSHOP">Wood Shop</option>
+			<option value="FORGE">Forge</option>
+			<option value="3DPRINT">3d Printing</option>
+			<option value="GLASSWORKING">Glassworking</option>
+			<option value="POTTERY">Pottery</option>
+			<option value="OTHER">Other</option>
+			<option value="KITCHEN">Industrial Kitchen</option>
+			<option value="CERAMICS"> Ceramic Workshop</option>
+		</select>	
+
+		<label>
+			Price
+		</label>
+		<input 
+			class="form-control" 
+			type="text" 
+			ng-model="toolEditCtrl.editedTool.price" >	
+	</div>
+	<button 
+		class="btn btn-primary"
+		type="submit"
+				
+	>
+		Add Shop
+	</button>
+
+	<button 
+		class="btn btn-warning"
+		type="button"
+		ng-show="toolEditCtrl.cancel"
+		ng-click="toolEditCtrl.cancel()"
+	>
+		Cancel
+	</button>
+</form>
