@@ -31875,11 +31875,17 @@
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	__webpack_require__(5);
+	var _angularResource = __webpack_require__(5);
 	
-	__webpack_require__(7);
+	var _angularResource2 = _interopRequireDefault(_angularResource);
 	
-	__webpack_require__(9);
+	var _angularAnimate = __webpack_require__(7);
+	
+	var _angularAnimate2 = _interopRequireDefault(_angularAnimate);
+	
+	var _angularFilter = __webpack_require__(9);
+	
+	var _angularFilter2 = _interopRequireDefault(_angularFilter);
 	
 	var _flashes = __webpack_require__(11);
 	
@@ -31903,7 +31909,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var ToolModule = _angular2.default.module('tools', ['ngResource', 'ngAnimate', 'angular.filter', _flashes2.default.name]).config(function ($resourceProvider) {
+	var ToolModule = _angular2.default.module('tools', [_angularResource2.default, _angularAnimate2.default, _angularFilter2.default, _flashes2.default.name]).config(function ($resourceProvider) {
 		$resourceProvider.defaults.stripTrailingSlashes = false;
 	}).config(function ($httpProvider) {
 		$httpProvider.defaults.xsrfCookieName = 'csrftoken';

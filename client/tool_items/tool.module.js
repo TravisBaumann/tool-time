@@ -1,7 +1,7 @@
 import angular from 'angular';
-import 'angular-resource';
-import 'angular-animate';
-import 'angular-filter';
+import angularResource from 'angular-resource';
+import angularAnimate from 'angular-animate';
+import angularFilter from 'angular-filter';
 
 import FlashesModule from '../flashes/flashes.module';
 
@@ -12,9 +12,9 @@ import toolEditComponent from './tool-edit.component';
 import toolAPIService from './tool-api.service';
 
 const ToolModule = angular.module('tools', [
-	'ngResource',
-	'ngAnimate',
-	'angular.filter',
+	angularResource,
+	angularAnimate,
+	angularFilter,
 	FlashesModule.name,
 ])
 	.config(($resourceProvider) => {
