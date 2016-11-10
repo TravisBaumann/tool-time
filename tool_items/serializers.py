@@ -7,5 +7,5 @@ class ToolItemSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = ToolItem
-		fields = ('id', 'name', 'price', 'created', 'categories', 'checked',)
+		fields = ('id', 'name', 'price','zipcode', 'state', 'created', 'categories', 'checked', 'phone', 'email',)
 
